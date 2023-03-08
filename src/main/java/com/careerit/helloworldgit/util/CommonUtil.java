@@ -7,10 +7,10 @@ public final class CommonUtil {
         private CommonUtil(){
 
         }
-        public static String maskAccountNumber(String accNumber){
-            if(StringUtils.isNoneEmpty(accNumber) && accNumber.length()>=4) {
-               return "********" + accNumber.substring(accNumber.length() - 4);
+        public static String maskData(String str){
+            if(StringUtils.isNoneEmpty(str) && str.length()>=4) {
+               return "********" + str.substring(str.length() - 4);
             }
-            return accNumber;
+            return str;
         }
 }
