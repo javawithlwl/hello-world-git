@@ -6,6 +6,9 @@ public final class CommonUtil {
 
         }
         public static String maskAccountNumber(String accNumber){
-            return "********"+accNumber.substring(accNumber.length()-4);
+            if(accNumber!=null && accNumber.length()>=4) {
+               return "********" + accNumber.substring(accNumber.length() - 4);
+            }
+            return accNumber;
         }
 }
